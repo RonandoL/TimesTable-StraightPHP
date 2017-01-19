@@ -1,8 +1,7 @@
 <?php
     $number = $_GET["number"];
     $array = range(1, $number);
-    $counter_array = $array;
-
+    $row_array = $array;
 ?>
 
 
@@ -28,8 +27,8 @@
           echo "</tr>";
 
               // Remaining Rows
-          foreach ($counter_array as $row) {
-            echo "<tr><th> $row </th>";   // !!!!! Don't forget to close this <tr>
+          foreach ($row_array as $row) {
+            echo "<tr><th> $row </th>";
             foreach ($array as $r) {
               echo "<td>" . ($r * $row) . "</td>";
             }
